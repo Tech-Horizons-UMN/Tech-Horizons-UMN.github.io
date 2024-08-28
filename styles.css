@@ -487,25 +487,25 @@
     height: 525px;
     width: 408px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/Images/image0.png');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('Images/image0.png');
     background-size: cover;
     position: relative;
     color: #fff;
 
 }
 .services__card:nth-child(2) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/Images/image1.png');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('Images/image1.png');
 }
 
 .services__card:nth-child(3) {
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/Images/image2.png');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('Images/image2.png');
 }
 .i_services__card {
     margin: 1rem;
     height: 408px;
     width: 408px;
     border-radius: 4px;
-    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('/Images/image0.png');
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('Images/image0.png');
     background-size: cover;
     position: relative;
     color: #fff;
@@ -516,16 +516,16 @@
 
 }
 #introduce {
-    background-image: url('/Images/introduce.png'); 
+    background-image: url('Images/introduce.png'); 
     background-color: #131313;
 }
 
 #immerse {
-    background-image: url('/Images/immerse.png'); 
+    background-image: url('Images/immerse.png'); 
     background-color: #131313;
 }
 #inspire {
-    background-image: url('/Images/inspire.png'); 
+    background-image: url('Images/inspire.png'); 
     background-color: #131313;
 }
 .services__card h2 {
