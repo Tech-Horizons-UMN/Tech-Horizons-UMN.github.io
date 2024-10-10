@@ -226,6 +226,9 @@
     padding: 0 50px;
 
 }
+#padding {
+    height: 15vh;
+}
 #about__hero {
     height: 25vh;
 }
