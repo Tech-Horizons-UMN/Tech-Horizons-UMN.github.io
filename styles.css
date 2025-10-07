@@ -98,12 +98,6 @@
 
 @media screen and (max-width: 960px) {
     .navbar__container {
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
         padding: 0;
     }
     .navbar__menu {
@@ -183,9 +177,6 @@
         /* lower bar of the 3 bar icon */
         transform: translateY(-8px) rotate(-45deg);
     }
-
-
-
 }
 
 /* Hero section CSS */
@@ -347,35 +338,23 @@
 /* starts getting jank at 1093 pixels and i dont know why */
 @media screen and (max-width: 768px) {
     .main__container {
-        display: grid;
         grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
         width: 100%;
-        margin: 0 auto;
         height: 100vh;
     }
+
     .about__main__container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-self: center;
-        margin: 0 auto;
-        
         height: 60vh;
-        
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0 50px;
-    
     }
+
     #about__hero__btm {
         height: 70vh
     }
+
     #about__hero {
         height: 30vh;
     }
+
     .main__content {
         text-align: center;
         margin-bottom: 4rem;
@@ -393,19 +372,14 @@
         font-size: 1.5rem;
     }
     .about__main__content p {
-        margin-top: 1rem;
         font-size: 1.5rem;
-        font-weight: 700;
-        color: #fff;
-        text-align: center;
-        /* justify-self: center; */
     }
 }
 
 
 @media screen and (max-width: 563px) {
     .about__main__content p {
-        font-size: 1 rem;
+        font-size: 1rem;
     }
     #about__hero {
         height: 350px;
@@ -447,11 +421,6 @@
         margin: 2.5 rem 0;
     }
 
-    /* #main__img {
-        height: 99%;
-        width: 99%;
-    } */
-
 }
 
 /* Services section css */
@@ -474,17 +443,16 @@
     margin-left: 5rem;
     margin-right: 5rem;
     font-size: 2.5rem;
-    
     text-align: center;
     
 }
-
 
 .services__container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .services__card {
     margin: 1rem;
     height: 525px;
@@ -496,6 +464,7 @@
     color: #fff;
 
 }
+
 .services__card:nth-child(2) {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('Images/image1.png');
 }
@@ -503,6 +472,7 @@
 .services__card:nth-child(3) {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%), url('Images/image2.png');
 }
+
 .i_services__card {
     margin: 1rem;
     height: 408px;
@@ -587,7 +557,7 @@
         height: 1600px;
     }
     #i_services {
-    height: 800px;
+        height: 800px;
     }
     .services h1 {
         font-size: 2rem;
@@ -598,10 +568,6 @@
     .services {
         height: 2100px;
     }
-    .services h1 {
-        font-size: 2rem;
-        margin-top: 12rem;
-    }
     #i_services {
         height: 1500px;
     }
@@ -611,7 +577,7 @@
     }
 }
 
-@media screen and (max-width: 480px) { /* 48-px */
+@media screen and (max-width: 480px) { /* 480px */
     .services {
         height: 2100px;
     }
