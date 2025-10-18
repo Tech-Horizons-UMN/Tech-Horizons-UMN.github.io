@@ -732,7 +732,15 @@
 
 
 /* board */
-/* board */
+.services.board__services .services__container {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
 .board__card {
     margin: 0.5rem;
     height: 450px;
@@ -795,6 +803,18 @@
     margin-top: 0.5rem;
 }
 
+.board__services {
+    height: auto !important;
+    min-height: auto !important;
+    padding: 2rem 0 !important;
+    margin-top: 0 !important;
+}
+
+.about__main:has(+ .board__services) .about__main__container {
+    height: 50vh !important; /* Keep this one - it's the correct height */
+    min-height: 400px !important;
+}
+
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
     .board__card {
@@ -822,21 +842,11 @@
     }
 }
 
-.board__services {
-    height: auto !important;
-    min-height: auto !important;
-    padding: 2rem 0 !important;
-    margin-top: -20vh !important; /* Added this line */
-}
-
-/* Override ALL media queries more aggressively */
+/* Override media queries */
 @media screen and (max-width: 1319px) {
     .board__services {
         height: auto !important;
         min-height: auto !important;
-    }
-    #i_services.board__services {
-        height: auto !important;
     }
 }
 
@@ -845,9 +855,6 @@
         height: auto !important;
         min-height: auto !important;
     }
-    #i_services.board__services {
-        height: auto !important;
-    }
 }
 
 @media screen and (max-width: 480px) {
@@ -855,12 +862,4 @@
         height: auto !important;
         min-height: auto !important;
     }
-    #i_services.board__services {
-        height: auto !important;
-    }
-}
-
-.about__main:has(+ .board__services) .about__main__container {
-    height: 40vh !important;
-    min-height: 300px !important;
 }
