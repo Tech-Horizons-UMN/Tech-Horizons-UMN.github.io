@@ -732,6 +732,7 @@
 
 
 /* board */
+/* board */
 .board__card {
     margin: 0.5rem;
     height: 450px;
@@ -825,6 +826,7 @@
     height: auto !important;
     min-height: auto !important;
     padding: 2rem 0 !important;
+    margin-top: -20vh !important; /* Added this line */
 }
 
 /* Override ALL media queries more aggressively */
@@ -856,4 +858,9 @@
     #i_services.board__services {
         height: auto !important;
     }
+}
+
+.about__main:has(+ .board__services) .about__main__container {
+    height: 40vh !important;
+    min-height: 300px !important;
 }
