@@ -820,3 +820,33 @@
         height: 140px;
     }
 }
+
+/* Remove background images for board member cards */
+.services__container .services__card {
+    background-image: none !important;
+    background: #fff;
+}
+
+/* Ensure text is visible */
+.services__container .services__card h2,
+.services__container .services__card .member__role,
+.services__container .services__card .member__desc {
+    position: static !important;
+    color: #333 !important;
+    text-align: center;
+    margin: 0.5rem 0;
+}
+
+.services__container .services__card h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+.services__container .services__card .member__role {
+    color: #f77062 !important;
+    font-weight: bold;
+}
+
+.services__container .services__card .member__desc {
+    color: #777 !important;
+}
