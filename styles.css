@@ -844,3 +844,26 @@
         max-width: 300px;
     }
 }
+.services__card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.services__card h2 {
+    position: static;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.services__card .member__role {
+    position: static;
+    margin: 0.5rem 0;
+}
+
+.services__card .member__desc {
+    position: static;
+    margin: 0.5rem 0;
+}
