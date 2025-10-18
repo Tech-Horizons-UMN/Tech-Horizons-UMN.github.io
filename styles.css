@@ -733,9 +733,9 @@
 
 /* board */
 .board__card {
-    margin: 1rem;
-    height: 525px;
-    width: 300px;
+    margin: 0.5rem;
+    height: 450px;
+    width: 280px;
     border-radius: 10px;
     background: #fff;
     position: relative;
@@ -744,7 +744,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
