@@ -731,8 +731,8 @@
 } 
 
 
-<!-- BOARD MEMBER SETTING -->
-.services__card {
+/* board */
+.board__card {
     margin: 1rem;
     height: 525px;
     width: 300px;
@@ -750,14 +750,14 @@
     transition: transform 0.3s ease;
 }
 
-.services__card:hover {
+.board__card:hover {
     transform: translateY(-5px);
 }
 
 /* Make images bigger */
 .member__image {
-    width: 180px;  /* Increased from 150px */
-    height: 180px; /* Increased from 150px */
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     overflow: hidden;
     margin: 0 auto 1.5rem;
@@ -769,12 +769,12 @@
 }
 
 .member__initials {
-    font-size: 3rem;  /* Increased from 2.5rem */
+    font-size: 3rem;
     font-weight: bold;
     color: #666;
 }
 
-.services__card h2 {
+.board__card h2 {
     color: #333;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
@@ -796,7 +796,7 @@
 
 /* Mobile Responsive */
 @media screen and (max-width: 768px) {
-    .services__card {
+    .board__card {
         width: 280px;
         height: 500px;
     }
@@ -808,7 +808,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .services__card {
+    .board__card {
         width: 100%;
         max-width: 300px;
         margin: 1rem 0;
@@ -819,34 +819,4 @@
         width: 140px;
         height: 140px;
     }
-}
-
-/* Remove background images for board member cards */
-.services__container .services__card {
-    background-image: none !important;
-    background: #fff;
-}
-
-/* Ensure text is visible */
-.services__container .services__card h2,
-.services__container .services__card .member__role,
-.services__container .services__card .member__desc {
-    position: static !important;
-    color: #333 !important;
-    text-align: center;
-    margin: 0.5rem 0;
-}
-
-.services__container .services__card h2 {
-    margin-top: 1rem;
-    font-size: 1.5rem;
-}
-
-.services__container .services__card .member__role {
-    color: #f77062 !important;
-    font-weight: bold;
-}
-
-.services__container .services__card .member__desc {
-    color: #777 !important;
 }
