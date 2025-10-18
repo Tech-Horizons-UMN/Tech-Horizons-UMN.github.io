@@ -827,8 +827,13 @@
     padding: 2rem 0 !important;
 }
 
+/* Override ALL media queries more aggressively */
 @media screen and (max-width: 1319px) {
     .board__services {
+        height: auto !important;
+        min-height: auto !important;
+    }
+    #i_services.board__services {
         height: auto !important;
     }
 }
@@ -836,11 +841,19 @@
 @media screen and (max-width: 880px) {
     .board__services {
         height: auto !important;
+        min-height: auto !important;
+    }
+    #i_services.board__services {
+        height: auto !important;
     }
 }
 
 @media screen and (max-width: 480px) {
     .board__services {
+        height: auto !important;
+        min-height: auto !important;
+    }
+    #i_services.board__services {
         height: auto !important;
     }
 }
