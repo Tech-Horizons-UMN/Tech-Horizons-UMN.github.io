@@ -731,33 +731,21 @@
 } 
 
 
-/* board */
-.services.board__services {
+  
+  /* CARD */
+  .board__card {
+    /* Let the cell control width; remove margins (use container gap) */
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+  
+    /* Grow with content (no overlap) */
     height: auto !important;
-    min-height: auto !important;
-    padding: 2rem 0 !important;
-    margin-top: 0 !important;
-}
-
-.services.board__services .services__container {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    align-items: flex-start !important;
-    gap: 2rem !important;
-    max-width: 1400px !important;
-    margin: 0 auto !important;
-    padding: 0 2rem !important;
-}
-
-.board__card {
-    margin: 0.5rem;
-    height: 450px;
-    width: 280px;
+  
     border-radius: 10px;
-    background: #fff;
+    background: var(--card-bg, #fff); /* ← CHANGE THIS LINE */
     position: relative;
-    color: #333;
+    color: var(--card-fg, #333); /* ← ALSO CHANGE THIS */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -767,13 +755,11 @@
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
-
-.board__card:hover {
-    transform: translateY(-5px);
-}
-
-/* Make images bigger */
-.member__image {
+  
+  .board__card:hover { transform: translateY(-5px); }
+  
+  /* IMAGE / AVATAR */
+  .member__image {
     width: 180px;
     height: 180px;
     border-radius: 50%;
@@ -784,91 +770,124 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.member__initials {
+  }
+  
+  .member__initials {
     font-size: 3rem;
     font-weight: bold;
     color: #666;
-}
-
-.board__card h2 {
+  }
+  
+  /* TEXT */
+  .board__card h2 {
     color: #333;
     margin-bottom: 0.5rem;
     font-size: 1.5rem;
-}
-
-.member__role {
+  }
+  
+  .member__role {
     font-weight: bold;
-    color: #f77062;
+    color: var(--accent, #f77062); /* ← CHANGE THIS LINE */
     margin-bottom: 1rem;
     font-size: 1.2rem;
 }
-
-.member__desc {
+  .member__desc {
     color: #777;
     font-size: 1rem;
-    line-height: 1.4;
+    line-height: 1.5;
     margin-top: 0.5rem;
-}
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+  
 
-.board__services {
-    height: auto !important;
-    min-height: auto !important;
-    padding: 2rem 0 !important;
-    margin-top: 0 !important;
-}
+  /* RESPONSIVE TWEAKS */
+  @media (max-width: 768px) {
+    .member__image { width: 160px; height: 160px; }
+  }
+  
+  @media (max-width: 480px) {
+    .member__image { width: 140px; height: 140px; }
+  }
 
-.about__main:has(+ .board__services) .about__main__container {
-    height: 50vh !important; /* Keep this one - it's the correct height */
-    min-height: 400px !important;
-}
 
-/* Mobile Responsive */
-@media screen and (max-width: 768px) {
-    .board__card {
-        width: 280px;
-        height: 500px;
-    }
-    
-    .member__image {
-        width: 160px;
-        height: 160px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .board__card {
-        width: 100%;
-        max-width: 300px;
-        margin: 1rem 0;
-        height: 480px;
-    }
-    
-    .member__image {
-        width: 140px;
-        height: 140px; 
-    }
-}
-
-/* Override media queries */
-@media screen and (max-width: 1319px) {
-    .board__services {
-        height: auto !important;
-        min-height: auto !important;
-    }
-}
-
-@media screen and (max-width: 880px) {
-    .board__services {
-        height: auto !important;
-        min-height: auto !important;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .board__services {
-        height: auto !important;
-        min-height: auto !important;
-    }
-}
+/* Reuse the Services section shell, but make the board auto-fit into columns */
+.services.board__services {
+    /* Don't lock height like the main Services section does */
+    height: auto;
+    min-height: 0;
+    padding: 2rem 0;
+  }
+  
+  .services.board__services .services__container {
+    /* Flex fallback */
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: stretch !important;
+    gap: 2rem !important;
+  
+    /* Prefer Grid */
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    grid-auto-rows: auto !important;
+  
+    max-width: 1400px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+  }
+  
+  /* Make sure only board cards are styled like cards here */
+  .services.board__services .board__card {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    background: var(--card-bg, #ffffff);   /* per-card background */
+    color: var(--card-fg, #333333);        /* per-card text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform .3s ease;
+  }
+  .services.board__services .board__card:hover { transform: translateY(-5px); }
+  
+  /* Avatar */
+  .services.board__services .member__image {
+    width: 180px; height: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 3px solid #f0f0f0;
+    background: #e0e0e0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .services.board__services .member__initials {
+    font-size: 3rem; font-weight: 700; color: #666;
+  }
+  
+  /* Text */
+  .services.board__services .board__card h2 {
+    font-size: 1.5rem; margin-bottom: .5rem; color: #333;
+  }
+  .services.board__services .member__role {
+    font-weight: 700;
+    color: var(--accent, #f77062);          /* per-card accent */
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  .services.board__services .member__desc {
+    color: #777; font-size: 1rem; line-height: 1.5;
+    word-wrap: break-word; overflow-wrap: anywhere;
+  }
+  
+  /* Mobile tweaks (optional) */
+  @media (max-width: 768px) {
+    .services.board__services .member__image { width:160px; height:160px; }
+  }
+  @media (max-width: 480px) {
+    .services.board__services .member__image { width:140px; height:140px; }
+  }
